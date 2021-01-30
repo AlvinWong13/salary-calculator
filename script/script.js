@@ -2,7 +2,7 @@ console.log('script.js');
 
 $(document).ready(onReady);
 
-let employee = [];
+let employees = [];
 function onReady() {
   console.log('Ready Now');
 
@@ -30,4 +30,10 @@ function onAddEmployee(event) {
     salary: Number(salary),
   };
   console.log('Got Employee', employeeInfo);
+
+  //Push employeeInfo into array of employees
+  employees.push(employeeInfo);
+  console.log('employees', employees);
+
+  // render employees to DOM
 }
