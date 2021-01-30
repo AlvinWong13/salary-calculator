@@ -36,4 +36,20 @@ function onAddEmployee(event) {
   console.log('employees', employees);
 
   // render employees to DOM
+  employeeData(employees);
+}
+
+function employeeData(employeeTable) {
+  $('#employeeTable').empty();
+  for (let employee of employeeTable) {
+    $('#employeeTable').append(`
+      <tr>
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.id}</td>
+        <td>${employee.job}</td>
+        <td>${employee.salary}</td>
+      </tr>
+    `);
+  }
 }
