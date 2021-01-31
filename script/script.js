@@ -1,18 +1,26 @@
-console.log('script.js');
+//console.log('script.js');
 
 $(document).ready(onReady);
 
 let employees = [];
+
+const totalSalaryMessage = 'Total Monthly Cost of All Employees: $';
+
+let totalSalary = 0;
+
 function onReady() {
-  console.log('Ready Now');
+  //console.log('Ready Now');
 
   // Add employee click
   $(document).on('click', '#inputEmployee', onAddEmployee);
+
+  // Add employee delete
+  $(document).on('click', '#deleteEmployee', onDeleteEmployee);
 }
 
 function onAddEmployee(event) {
   event.preventDefault();
-  console.log('Add Employee');
+  //console.log('Add Employee');
 
   // Grab item from DOM
   let firstName = $('#firstNameInput').val();
@@ -29,14 +37,30 @@ function onAddEmployee(event) {
     job: job,
     salary: Number(salary),
   };
-  console.log('Got Employee', employeeInfo);
+  //console.log('Got Employee', employeeInfo);
 
   //Push employeeInfo into array of employees
   employees.push(employeeInfo);
-  console.log('employees', employees);
+  //console.log('employees', employees);
 
   // render employees to DOM
   employeeData(employees);
+
+  totalSalary += Number(salary);
+
+  $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
+
+  //clear input
+  $('#firstNameInput').val('');
+  $('#lastNameInput').val('');
+  $('#idNumber').val('');
+  $('#jobTitle').val('');
+  $('#salaryInput').val('');
+}
+
+function onDeleteEmployee() {
+  console.log('Delete employee');
+  $(this).remove();
 }
 
 function employeeData(employeeTable) {
@@ -49,6 +73,7 @@ function employeeData(employeeTable) {
         <td>${employee.id}</td>
         <td>${employee.job}</td>
         <td>${employee.salary}</td>
+        <td><button class="deleteButton">Delete</button></td>
       </tr>
     `);
   }

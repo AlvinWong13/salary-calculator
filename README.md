@@ -4,15 +4,15 @@
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-- [] HTML/CSS/JS/jQuery setup
-- [] Form to accept:
-  - [] First Name
-  - [] Last Name
-  - [] ID number
-  - [] Job Title
-  - [] Salary
-- [] Submit form button (save items to an array)
-- [] Store information to:
+- [x] HTML/CSS/JS/jQuery setup
+- [x] Form to accept:
+  - [x] First Name
+  - [x] Last Name
+  - [x] ID number
+  - [x] Job Title
+  - [x] Salary
+- [x] Submit form button (save items to an array)
+- [x] Store information to:
   - [] Calculate monthly costs
   - [] render information
 - [] clear input fields
