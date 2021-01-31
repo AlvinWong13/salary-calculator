@@ -65,6 +65,13 @@ function onAddEmployee(event) {
 // delete employee information and salary, remove from total
 function onDeleteEmployee() {
   // console.log('Delete employee');
+  let idNumber = this.id;
+  for (let i = 0; i < employees.length; i++) {
+    if ((employees[i].id = idNumber)) {
+      employees.splice(i, 1);
+      break;
+    }
+  }
   let currentRow = $(this).closest('tr');
   let removedSalary = currentRow.find('td:eq(4)').text();
   // console.log('removed salary is:', removedSalary);
@@ -73,7 +80,7 @@ function onDeleteEmployee() {
   $(this).closest('tr').remove();
 
   if (totalSalary <= 20000) {
-    $('h3').css('background', 'rgb(17, 231, 17)');
+    $('h3').css('background', 'grey');
   }
 }
 
@@ -88,7 +95,7 @@ function employeeData(employeeTable) {
         <td>${employee.id}</td>
         <td>${employee.job}</td>
         <td>${employee.salary}</td>
-        <td><button class="deleteEmployee">Delete</button></td>
+        <td><button class="deleteEmployee" id="id">Delete</button></td>
       </tr>
     `);
   }

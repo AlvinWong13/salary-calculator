@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(17, 231, 17);
+  background-color: grey;
   color: black;
   font-family: Helvetica, sans-serif;
   text-align: center;
@@ -8,7 +8,8 @@ body {
 
 table,
 th,
-td {
+td,
+tfoot {
   border: 2px #000 solid;
   padding: 3px;
   margin: 3px;
