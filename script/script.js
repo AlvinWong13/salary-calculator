@@ -15,7 +15,7 @@ function onReady() {
   $(document).on('click', '#inputEmployee', onAddEmployee);
 
   // Add employee delete
-  $(document).on('click', '#deleteEmployee', onDeleteEmployee);
+  $(document).on('click', '.deleteEmployee', onDeleteEmployee);
 }
 
 function onAddEmployee(event) {
@@ -60,7 +60,8 @@ function onAddEmployee(event) {
 
 function onDeleteEmployee() {
   console.log('Delete employee');
-  $(this).remove();
+  let currentRow = $(this).closest('tr');
+  $(this).closest('tr').remove();
 }
 
 function employeeData(employeeTable) {
@@ -73,7 +74,7 @@ function employeeData(employeeTable) {
         <td>${employee.id}</td>
         <td>${employee.job}</td>
         <td>${employee.salary}</td>
-        <td><button class="deleteButton">Delete</button></td>
+        <td><button class="deleteEmployee">Delete</button></td>
       </tr>
     `);
   }
