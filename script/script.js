@@ -70,6 +70,10 @@ function onDeleteEmployee() {
   totalSalary = totalSalary - removedSalary;
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
   $(this).closest('tr').remove();
+
+  if (totalSalary <= 20000) {
+    $('h3').css('background', 'Black');
+  }
 }
 
 function employeeData(employeeTable) {

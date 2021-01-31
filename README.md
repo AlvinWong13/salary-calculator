@@ -22,7 +22,7 @@ Your project description goes here. What problem did you solve? How did you solv
 ## Stretch
 
 - [] style to fit theme
-- [] delete button for employees that updates total
+- [x] delete button for employees that updates total
 
   ## Usage
 
