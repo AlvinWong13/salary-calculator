@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Salary Calculator</title>
   </head>
-  <body>
+  <header>
     <h1>Cullen Salary Calculator</h1>
-
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+      <polygon fill="white" points="0,100 100,0 100,100" />
+    </svg>
+  </header>
+  <body>
     <h2>Employee Information</h2>
     <form>
       <!-- First Name input -->
@@ -27,19 +35,21 @@
       <input type="submit" value="Submit" id="inputEmployee" />
     </form>
     <h2>Employees</h2>
-    <table class="center">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID Number</th>
-          <th>Job Title</th>
-          <th>Salary</th>
-        </tr>
-      </thead>
-      <tbody id="employeeTable"></tbody>
-      <tfoot></tfoot>
-    </table>
+    <div class="table-wrapper">
+      <table class="fl-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID Number</th>
+            <th>Job Title</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
     <h3 id="totalSalary"></h3>
   </body>
 </html>
