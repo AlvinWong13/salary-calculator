@@ -50,6 +50,10 @@ function onAddEmployee(event) {
 
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
 
+  if (totalSalary > 20000) {
+    $('h3').css('background', 'Red');
+  }
+
   //clear input
   $('#firstNameInput').val('');
   $('#lastNameInput').val('');

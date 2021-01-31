@@ -13,9 +13,9 @@ Your project description goes here. What problem did you solve? How did you solv
   - [x] Salary
 - [x] Submit form button (save items to an array)
 - [x] Store information to:
-  - [] Calculate monthly costs
-  - [] render information
-- [] clear input fields
+  - [x] Calculate monthly costs
+  - [x] render information
+- [x] clear input fields
 - [] Monthly costs > 20k add red background color
 
 ## Stretch
