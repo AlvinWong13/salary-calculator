@@ -65,6 +65,10 @@ function onAddEmployee(event) {
 function onDeleteEmployee() {
   console.log('Delete employee');
   let currentRow = $(this).closest('tr');
+  let removedSalary = currentRow.find('td:eq(4)').text();
+  console.log('removed salary is:', removedSalary);
+  totalSalary = totalSalary - removedSalary;
+  $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
   $(this).closest('tr').remove();
 }
 

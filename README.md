@@ -16,14 +16,13 @@ Your project description goes here. What problem did you solve? How did you solv
   - [x] Calculate monthly costs
   - [x] render information
 - [x] clear input fields
-- [] Monthly costs > 20k add red background color
+- [x] delete button for employees
+- [x] Monthly costs > 20k add red background color
 
 ## Stretch
 
 - [] style to fit theme
-- [] delete button for employee
-
-  - [] update total spent from removal
+- [] delete button for employees that updates total
 
   ## Usage
 
