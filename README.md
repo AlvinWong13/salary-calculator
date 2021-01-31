@@ -21,7 +21,7 @@ Your project description goes here. What problem did you solve? How did you solv
 
 ## Stretch
 
-- [] style to fit theme
+- [x] style to fit theme
 - [x] delete button for employees that updates total -[x] color changes back when > 20k
 
   ## Usage

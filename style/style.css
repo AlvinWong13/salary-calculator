@@ -1,4 +1,24 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: rgb(17, 231, 17);
+  color: black;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  font-size: large;
+}
+
+table,
+th,
+td {
+  border: 2px #000 solid;
+  padding: 3px;
+  margin: 3px;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  font-size: 125%;
 }

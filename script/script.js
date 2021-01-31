@@ -73,7 +73,7 @@ function onDeleteEmployee() {
   $(this).closest('tr').remove();
 
   if (totalSalary <= 20000) {
-    $('h3').css('background', 'Black');
+    $('h3').css('background', 'rgb(17, 231, 17)');
   }
 }
 
