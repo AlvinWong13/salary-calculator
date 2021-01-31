@@ -1,4 +1,4 @@
-//console.log('script.js');
+// console.log('script.js');
 
 $(document).ready(onReady);
 
@@ -9,7 +9,7 @@ const totalSalaryMessage = 'Total Monthly Cost of All Employees: $';
 let totalSalary = 0;
 
 function onReady() {
-  //console.log('Ready Now');
+  // console.log('Ready Now');
 
   // Add employee click
   $(document).on('click', '#inputEmployee', onAddEmployee);
@@ -20,7 +20,7 @@ function onReady() {
 
 function onAddEmployee(event) {
   event.preventDefault();
-  //console.log('Add Employee');
+  // console.log('Add Employee');
 
   // Grab item from DOM
   let firstName = $('#firstNameInput').val();
@@ -37,19 +37,19 @@ function onAddEmployee(event) {
     job: job,
     salary: Number(salary),
   };
-  //console.log('Got Employee', employeeInfo);
+  // console.log('Got Employee', employeeInfo);
 
-  //Push employeeInfo into array of employees
+  // Push employeeInfo into array of employees
   employees.push(employeeInfo);
-  //console.log('employees', employees);
+  // console.log('employees', employees);
 
   // render employees to DOM
   employeeData(employees);
-
+  // calculate total salary
   totalSalary += Number(salary);
-
+  // total salary message
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
-
+  // change total salary background
   if (totalSalary > 20000) {
     $('h3').css('background', 'Red');
   }
@@ -62,11 +62,12 @@ function onAddEmployee(event) {
   $('#salaryInput').val('');
 }
 
+// delete employee information and salary, remove from total
 function onDeleteEmployee() {
-  console.log('Delete employee');
+  // console.log('Delete employee');
   let currentRow = $(this).closest('tr');
   let removedSalary = currentRow.find('td:eq(4)').text();
-  console.log('removed salary is:', removedSalary);
+  // console.log('removed salary is:', removedSalary);
   totalSalary = totalSalary - removedSalary;
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
   $(this).closest('tr').remove();
@@ -76,6 +77,7 @@ function onDeleteEmployee() {
   }
 }
 
+// gather employee information and put into table
 function employeeData(employeeTable) {
   $('#employeeTable').empty();
   for (let employee of employeeTable) {
