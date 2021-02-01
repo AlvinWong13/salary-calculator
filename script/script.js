@@ -46,7 +46,7 @@ function onAddEmployee(event) {
   // render employees to DOM
   employeeData(employees);
   // calculate total salary
-  totalSalary += Number(salary);
+  totalSalary += Number(salary) / 12;
   // total salary message
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));
   // change total salary background
@@ -74,6 +74,7 @@ function onDeleteEmployee() {
   }
   let currentRow = $(this).closest('tr');
   let removedSalary = currentRow.find('td:eq(4)').text();
+  removedSalary = removedSalary / 12;
   // console.log('removed salary is:', removedSalary);
   totalSalary = totalSalary - removedSalary;
   $('#totalSalary').text(totalSalaryMessage + Math.round(totalSalary));

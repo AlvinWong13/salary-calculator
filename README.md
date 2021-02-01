@@ -22,13 +22,19 @@ Your project description goes here. What problem did you solve? How did you solv
 ## Stretch
 
 - [x] style to fit theme
-- [x] delete button for employees that updates total -[x] color changes back when > 20k
+- [x] delete button for employees that updates total
 
-  ## Usage
+  - [x] color changes back when > 20k
 
-  ## Built With
+## Screenshot
 
-  - HTML, CSS, JS, jQuery
+![Project](salary-calculator/salary-calculator.png)
+
+## Usage
+
+## Built With
+
+- HTML, CSS, JS, jQuery
 
 ## Acknowledgement
 
